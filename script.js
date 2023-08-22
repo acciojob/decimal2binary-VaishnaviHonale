@@ -1,18 +1,21 @@
 function decimalToBinary(num) {
   //Write you code here
-	let bin = 0;
-    let rem, i = 1, step = 1;
-    while (num != 0) {
-        rem = num % 2;
-        console.log(
-            `Step ${step++}: ${x}/2, Remainder = ${rem}, Quotient = ${parseInt(x/2)}`
-        );
-        num = parseInt(num / 2);
-        bin = bin + rem * i;
-        i = i * 10;
+	let binaryNum = new Array(32);
+ 
+    // counter for binary array
+    let i = 0;
+    while (n > 0) {
+ 
+        // storing remainder in binary array
+        binaryNum[i] = n % 2;
+        n = Math.floor(n / 2);
+        i++;
     }
-    console.log(`Binary: ${bin}`);
-  
+ 
+    // printing binary array in reverse order
+    for (let j = i - 1; j >= 0; j--)
+        document.write(binaryNum[j]);
 }
+
 
 window.decimalToBinary = decimalToBinary;
